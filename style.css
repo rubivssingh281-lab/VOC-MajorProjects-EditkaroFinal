@@ -421,7 +421,7 @@
         overflow: hidden;
         position: relative;
         background: var(--ink);
-        background-image: url('E:/MyPrograms/VaultofCodes/VOC-Major/Project.2-Editkaro/images/Footerwall.png');
+        background-image: url('/images/Footerwall.png');
         background-size: cover;
         background-position: bottom;
     }
