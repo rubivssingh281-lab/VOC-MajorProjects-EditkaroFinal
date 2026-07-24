@@ -1037,7 +1037,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 video.currentTime = 0;
                 video.play().catch(() => { });
                 video.classList.add('show');
-            }, 250);
+            }, 200);
         });
 
         frame.addEventListener('mouseleave', () => {
