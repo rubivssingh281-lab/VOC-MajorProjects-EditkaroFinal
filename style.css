@@ -421,7 +421,7 @@
         overflow: hidden;
         position: relative;
         background: var(--ink);
-        background-image: url('/VOC-MajorProjects-EditkaroFinal/images/Footerwall.png');
+        background-image: url('../images/Footerwall.png');
         background-size: cover;
         background-position: bottom;
     }
