@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Editkaro — Motion & Film Studio</title>
+  <link rel="icon" type="image/png" href="E:/MyPrograms/VaultofCodes/VOC-Major/Project.2-Editkaro/images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/3.4.10/tailwind.min.js"></script>
+  <script>
+    tailwind.config = {
+      darkMode: ['class', '[class~="light"]'],
+      theme: {
+        extend: {
+          colors: {
+            ink: 'var(--ink)',
+            bone: 'var(--bone)',
+            cobalt: 'var(--cobalt)',
+            olive: 'var(--olive)',
+          },
+          fontFamily: {
+            display: ['Fraunces', 'serif'],
+            sans: ['Space Grotesk', 'Inter', 'sans-serif'],
+          },
+          transitionTimingFunction: {
+            'power3-out': 'var(--ease-power3-out)',
+            'power4-out': 'var(--ease-power4-out)',
+            'back-out': 'var(--ease-back-out)',
+          },
+          transitionDuration: {
+            fast: 'var(--dur-fast)',
+            base: 'var(--dur-base)',
+            slow: 'var(--dur-slow)',
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <div id="intro-overlay">
+    <div class="word display italic">Drift In</div>
+  </div>
+  <div id="page-transition"></div>
+
+  <canvas id="blob-canvas"></canvas>
+  <div class="bg-chapter" id="bgChapter"></div>
+  <div class="bg-parallax" id="bgParallax"></div>
+  <div class="grain"></div>
+
+  <div id="scrollbar-track">
+    <div id="scrollbar-fill"></div>
+  </div>
+  <canvas id="trail-canvas"></canvas>
+
+  <div id="viewfinder">
+    <img id="vf-img" src="" alt="" />
+    <div class="vf-shine"></div>
+    <div class="vf-label" id="vf-label">VIEW</div>
+  </div>
+  <div id="dot"></div>
+
+  <button id="sound-toggle" type="button" aria-label="Toggle ambient sound">
+    <div class="wave"><i></i><i></i><i></i><i></i></div>
+  </button>
+
+  <header id="header">
+    <div class="logo">DRIFT</div>
+    <nav>
+      <ul>
+        <li><a href="#story">Story</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#categories">Categories</a></li>
+        <li><a href="#reel">Reel</a></li>
+        <li><a href="#about">Studio</a></li>
+        <li><a href="#contact" class="enquire">Contact</a></li>
+        <li class="theme-item">
+          <button id="theme-toggle" type="button" aria-label="Toggle light and dark theme">
+            <span id="theme-icon">☾</span><span id="theme-label">Dark</span>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO-->
+  <section id="hero">
+    <div class="marquee-row">
+      <div class="marquee-track fwd">
+        <span class="o">Capture</span><span>Motion</span><span class="o">Capture</span><span>Motion</span>
+        <span class="o">Capture</span><span>Motion</span><span class="o">Capture</span><span>Motion</span>
+        <span class="o">Capture</span><span>Motion</span><span class="o">Capture</span><span>Motion</span>
+      </div>
+    </div>
+    <div class="marquee-row">
+      <div class="marquee-track rev">
+        <span>Motion</span><span class="o">Studio</span><span>Motion</span><span class="o">Studio</span>
+        <span>Motion</span><span class="o">Studio</span><span>Motion</span><span class="o">Studio</span>
+        <span>Motion</span><span class="o">Studio</span><span>Motion</span><span class="o">Studio</span>
+      </div>
+    </div>
+    <div class="hero-sub">
+      <div class="reveal-mask">
+        <p>DRIFT is a motion and film studio working with brands who want their story to move — literally. We shoot,
+          edit, and animate campaigns that hold attention past the scroll.</p>
+      </div>
+      <div class="hero-meta">
+        <div>Est.<span>2018</span></div>
+        <div>Based<span>Lisbon / Remote</span></div>
+        <div>Status<span>Booking Q1</span></div>
+      </div>
+    </div>
+    <div class="scroll-cue">
+      <div class="bar"></div>Scroll
+    </div>
+    <div class="floaters"><span class="floater f1"></span><span class="floater f2"></span><span
+        class="floater f3"></span></div>
+  </section>
+
+  <!-- STICKY PIN CHAPTERS -->
+  <section class="pin-wrap sticky-section" id="story" data-chapters="#0a0808,#0f1524,#241a10,#12161a" style="background-image: url('E:/MyPrograms/VaultofCodes/VOC-Major/Project.2-Editkaro/images/image_part_001(1).jpg');
+    background-size: cover;
+    background-position: bottom;">
+    <div class="pin-stage">
+      <div class="hero-card" data-expand="story" style="margin: 2px;">
+        <div class="card-bg"
+          style="background-image: url('E:/MyPrograms/VaultofCodes/VOC-Major/Project.2-Editkaro/images/heroFrame.jpg');">
+        </div>
+        <div class="card-media media-a">
+          <div class="media-line"></div>
+        </div>
+        <div class="card-glow"></div>
+        <div class="tag">REEL · 2016 — 2026</div>
+        <div class="card-title">Frames<span class="serif">&nbsp;in flux.</span></div>
+        <div class="card-foot"><span>Direction · Design · Motion</span><span>01 / 03</span></div>
+      </div>
+      <div class="pillar pillar-1">
+        <div class="pillar-link" role="button" tabindex="0" aria-expanded="false"
+          aria-label="Expand details about Craft">
+          <video class="pillar-video-bg" autoplay muted loop playsinline preload="none">
+            <source src="videos/peaceful-loop-01.mp4" type="video/mp4">
+          </video>
+          <div class="pillar-overlay"></div>
+          <div class="num">01 — Craft</div>
+          <h3>Every frame<br />is a decision.</h3>
+          <p>We obsess over easing curves, timing, and weight until motion stops feeling designed and starts feeling
+            inevitable.</p>
+          <div class="pillar-more">
+            <p>Every project starts with a frame-rate conversation, not a mood board. We map out the exact easing
+              curve a brand's motion should live in — snappy and confident, or slow and deliberate — before a
+              single asset is cut. That decision becomes the DNA of everything that follows: transitions, camera
+              moves, even how long a logo holds on screen.</p>
+            <p>We treat restraint as a design tool. Most of our work is defined as much by what we chose not to
+              animate as by what moves. It's why our reels tend to feel calmer than they look busy.</p>
+          </div>
+          <button type="button" class="pillar-cta" aria-expanded="false">Read more</button>
+        </div>
+      </div>
+      <div class="pillar pillar-2">
+        <div class="pillar-link" role="button" tabindex="0" aria-expanded="false"
+          aria-label="Expand details about Story">
+          <video class="pillar-video-bg" autoplay muted loop playsinline preload="none">
+            <source src="videos/peaceful-loop-02.mp4" type="video/mp4">
+          </video>
+          <div class="pillar-overlay"></div>
+          <div class="num">02 — Story</div>
+          <h3>Rhythm carries<br />the narrative.</h3>
+          <p>Pacing is our language. We choreograph attention across seconds so a message lands with the emotional
+            beat it deserves.</p>
+          <div class="pillar-more">
+            <p>We storyboard for emotion first, information second. A campaign might open on stillness and only
+              start moving once it's earned the viewer's attention — every cut, hold, and acceleration is placed
+              deliberately, like beats in a piece of music.</p>
+            <p>The goal is always the same: by the time the message lands, the audience has already felt something.
+              Pacing is what makes a thirty-second film feel inevitable rather than edited.</p>
+          </div>
+          <button type="button" class="pillar-cta" aria-expanded="false">Read more</button>
+        </div>
+      </div>
+      <div class="pillar pillar-3">
+        <div class="pillar-link" role="button" tabindex="0" aria-expanded="false"
+          aria-label="Expand details about Systems">
+          <video class="pillar-video-bg" autoplay muted loop playsinline preload="none">
+            <source src="videos/peaceful-loop-03.mp4" type="video/mp4">
+          </video>
+          <div class="pillar-overlay"></div>
+          <div class="num">03 — Systems</div>
+          <h3>Motion that<br />scales cleanly.</h3>
+          <p>Reusable motion systems and tokens keep a brand alive and consistent across every screen, platform,
+            and moment.</p>
+          <div class="pillar-more">
+            <p>A single hero film is easy. Keeping that same feeling consistent across a hundred social cuts,
+              product pages, and app transitions is the hard part — so we build motion the way engineers build
+              design systems: as reusable tokens, not one-off tricks.</p>
+            <p>Easing curves, timing values, and transition rules get documented and handed off, so a brand's
+              motion language survives long after our engagement ends.</p>
+          </div>
+          <button type="button" class="pillar-cta" aria-expanded="false">Read more</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pin-wrap sticky-section" id="process" data-chapters="#12161a,#101c22,#0d222a,#0a1a1f" style="background-image: url('E:/MyPrograms/VaultofCodes/VOC-Major/Project.2-Editkaro/images/image_part_002(1).jpg');
+    background-size: cover;
+    background-position: top;">
+    <div class="pin-stage">
+      <div class="hero-card" data-expand="process">
+        <div class="card-bg"
+          style="background-image: url('E:/MyPrograms/VaultofCodes/VOC-Major/Project.2-Editkaro/images/BriefMotion.jpg');">
+        </div>
+        <div class="card-media media-b">
+          <div class="media-line"></div>
+        </div>
+        <div class="card-glow"></div>
+        <div class="tag">HOW WE WORK</div>
+        <div class="card-title">From brief<span class="serif">&nbsp;to motion.</span></div>
+        <div class="card-foot"><span>Discover · Design · Deliver</span><span>02 / 03</span></div>
+      </div>
+      <div class="pillar pillar-1">
+        <div class="pillar-link" role="button" tabindex="0" aria-expanded="false"
+          aria-label="Expand details about Listen">
+          <video class="pillar-video-bg" autoplay muted loop playsinline preload="none">
+            <source src="videos/peaceful-loop-04.mp4" type="video/mp4">
+          </video>
+          <div class="pillar-overlay"></div>
+          <div class="num">Phase 01 — Listen</div>
+          <h3>We start<br />with intent.</h3>
+          <p>Before a single keyframe, we map the feeling a brand needs to earn and the moment motion should own.</p>
+          <div class="pillar-more">
+            <p>Every engagement opens with conversation, not a creative brief template. We ask what the brand wants
+              people to feel in the first three seconds, and what moment in their story actually deserves motion —
+              not everything does.</p>
+            <p>This listening phase shapes the whole project. It's where we decide whether a film should whisper
+              or announce itself, long before any storyboard exists.</p>
+          </div>
+          <button type="button" class="pillar-cta" aria-expanded="false">Read more</button>
+        </div>
+      </div>
+      <div class="pillar pillar-2">
+        <div class="pillar-link" role="button" tabindex="0" aria-expanded="false"
+          aria-label="Expand details about Choreograph">
+          <video class="pillar-video-bg" autoplay muted loop playsinline preload="none">
+            <source src="videos/peaceful-loop-05.mp4" type="video/mp4">
+          </video>
+          <div class="pillar-overlay"></div>
+          <div class="num">Phase 02 — Choreograph</div>
+          <h3>We design<br />the timing.</h3>
+          <p>Storyboards become motion studies. We prototype easing and rhythm early, so the team feels the beat
+            before polish.</p>
+          <div class="pillar-more">
+            <p>Rather than jumping straight to full production, we build rough motion studies — grey-box
+              animations that test timing and rhythm before a single frame is polished. This lets a client feel
+              the pacing early, when changes are cheap.</p>
+            <p>Only once the choreography is approved does the real craft work begin: grading, sound design, and
+              final compositing.</p>
+          </div>
+          <button type="button" class="pillar-cta" aria-expanded="false">Read more</button>
+        </div>
+      </div>
+      <div class="pillar pillar-3">
+        <div class="pillar-link" role="button" tabindex="0" aria-expanded="false"
+          aria-label="Expand details about Ship">
+          <video class="pillar-video-bg" autoplay muted loop playsinline preload="none">
+            <source src="videos/peaceful-loop-06.mp4" type="video/mp4">
+          </video>
+          <div class="pillar-overlay"></div>
+          <div class="num">Phase 03 — Ship</div>
+          <h3>We deliver<br />it living.</h3>
+          <p>Final frames arrive with tokens, specs, and Lottie — motion engineers can implement without losing a
+            millisecond.</p>
+          <div class="pillar-more">
+            <p>Delivery isn't a folder of render files. Every project ships with implementation-ready assets —
+              Lottie files, easing specs, and timing documentation — so an internal dev team can build the exact
+              motion we designed, without guessing at values.</p>
+            <p>We stay available past handoff too, since the first real-world implementation always surfaces a
+              question or two.</p>
+          </div>
+          <button type="button" class="pillar-cta" aria-expanded="false">Read more</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pin-wrap sticky-section" id="studio" data-chapters="#0a1a1f,#1a0f22,#221a10,#191512" style="background-image: url('E:/MyPrograms/VaultofCodes/VOC-Major/Project.2-Editkaro/images/image_part_003(1).jpg');
+    background-size: cover;
+    background-position: top;">
+    <div class="pin-stage">
+      <div class="hero-card" data-expand="studio">
+        <div class="card-bg"
+          style="background-image: url('E:/MyPrograms/VaultofCodes/VOC-Major/Project.2-Editkaro/images/Studio.jpg');">
+        </div>
+        <div class="card-media media-c">
+          <div class="media-line"></div>
+        </div>
+        <div class="card-glow"></div>
+        <div class="tag">THE STUDIO</div>
+        <div class="card-title">A small room<span class="serif">&nbsp;of specialists.</span></div>
+        <div class="card-foot"><span>Nine people · Two cities</span><span>03 / 03</span></div>
+      </div>
+      <div class="pillar pillar-1">
+        <div class="pillar-link" role="button" tabindex="0" aria-expanded="false"
+          aria-label="Expand details about Philosophy">
+          <video class="pillar-video-bg" autoplay muted loop playsinline preload="none">
+            <source src="videos/peaceful-loop-07.mp4" type="video/mp4">
+          </video>
+          <div class="pillar-overlay"></div>
+          <div class="num">Philosophy</div>
+          <h3>Restraint over<br />spectacle.</h3>
+          <p>We believe the best motion is nearly invisible — you feel the smoothness long before you notice the
+            technique.</p>
+          <div class="pillar-more">
+            <p>It's easy to make motion loud. It's much harder to make it feel inevitable — the kind of animation
+              a viewer doesn't consciously register, but would immediately miss if it were removed.</p>
+            <p>That's the standard every frame is held to here. If a transition draws attention to itself instead
+              of the story, it gets cut, no matter how technically impressive it is.</p>
+          </div>
+          <button type="button" class="pillar-cta" aria-expanded="false">Read more</button>
+        </div>
+      </div>
+      <div class="pillar pillar-2">
+        <div class="pillar-link" role="button" tabindex="0" aria-expanded="false"
+          aria-label="Expand details about People">
+          <video class="pillar-video-bg" autoplay muted loop playsinline preload="none">
+            <source src="videos/peaceful-loop-08.mp4" type="video/mp4">
+          </video>
+          <div class="pillar-overlay"></div>
+          <div class="num">People</div>
+          <h3>Directors who<br />animate.</h3>
+          <p>No hand-offs between thinkers and makers. Everyone who shapes the idea also shapes the final frame.</p>
+          <div class="pillar-more">
+            <p>We deliberately stay small and cross-functional. The person who pitches the creative direction is
+              often the same person animating the final cut — so nothing gets lost in translation between
+              concept and execution.</p>
+            <p>It's a slower way to scale, but it means every project carries a single, consistent point of view
+              from first sketch to final export.</p>
+          </div>
+          <button type="button" class="pillar-cta" aria-expanded="false">Read more</button>
+        </div>
+      </div>
+      <div class="pillar pillar-3">
+        <div class="pillar-link" role="button" tabindex="0" aria-expanded="false"
+          aria-label="Expand details about Practice">
+          <video class="pillar-video-bg" autoplay muted loop playsinline preload="none">
+            <source src="videos/peaceful-loop-09.mp4" type="video/mp4">
+          </video>
+          <div class="pillar-overlay"></div>
+          <div class="num">Practice</div>
+          <h3>Fewer, deeper<br />partnerships.</h3>
+          <p>We take on a handful of projects a year so each one gets the obsession — and the time — to be right.</p>
+          <div class="pillar-more">
+            <p>We turn down far more work than we accept. A small, selective roster means every partnership gets
+              real time — for testing ideas that don't work, revisiting cuts that felt almost right, and pushing
+              past the first acceptable version.</p>
+            <p>It's a trade-off we're comfortable with: fewer logos on the reel, but a body of work we'd stand
+              behind years later.</p>
+          </div>
+          <button type="button" class="pillar-cta" aria-expanded="false">Read more</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section id="work">
+    <div class="eyebrow">Selected Work</div>
+    <div class="work-head">
+      <h2 class="display">Recent<br /><em>projects.</em></h2>
+      <div class="work-count">06 — Featured</div>
+    </div>
+    <div class="project-list">
+      <div class="project-row" data-img="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=600&q=60"
+        data-label="Film" data-client="Northline" data-role="Direction, Edit"
+        data-desc="A brand film built around stillness and restraint — the campaign opens on a held frame before motion is allowed to earn its place, letting the product reveal itself rather than announcing it."
+        data-gallery="https://static.vecteezy.com/system/resources/thumbnails/003/941/258/small/old-film-camera-and-laptop-on-table-hipster-working-area-photo.jpg,https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=1200&q=80,https://images.unsplash.com/photo-1526481280693-3bfa7568e0f3?w=1200&q=80">
+        <div class="idx">01</div>
+        <h3>Northline — Brand Film</h3>
+        <div class="tags"><span>Direction</span><span>Edit</span></div>
+        <div class="year">2025</div>
+      </div>
+      <div class="project-row" data-img="https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=600&q=60"
+        data-label="Motion" data-client="Auric" data-role="Animation, Sound"
+        data-desc="A product launch loop where every easing curve was scored against a custom sound design pass — motion and audio choreographed together frame by frame rather than layered on afterward."
+        data-gallery="https://images.squarespace-cdn.com/content/v1/633b40101701fe4e23763a67/32f59946-7ec7-461e-93c1-01404c3e6966/laura-metzler-photography-photo-photographer-photos-washington-dc-metro-area-dmc-maryland-virginia-personal-photoshoot-product-consumer-products-e-commerce-photography-4.jpg?format=750w,https://images.squarespace-cdn.com/content/v1/633b40101701fe4e23763a67/f149693b-804a-412d-aa0e-b6e3fb3e5274/laura-metzler-photography-photo-photographer-photos-washington-dc-metro-area-dmc-maryland-virginia-personal-photoshoot-product-consumer-products-e-commerce-photography-5.jpg?format=750w,https://images.unsplash.com/photo-1533158326339-7f3cf2404354?w=1200&q=80">
+        <div class="idx">02</div>
+        <h3>Auric — Product Launch</h3>
+        <div class="tags"><span>Animation</span><span>Sound</span></div>
+        <div class="year">2025</div>
+      </div>
+      <div class="project-row" data-img="https://images.unsplash.com/photo-1526481280693-3bfa7568e0f3?w=600&q=60"
+        data-label="Campaign" data-client="Verdant" data-role="Direction, Color"
+        data-desc="A retail campaign shot around a single restrained palette. Color grading did the emotional heavy lifting here — the brief was to make green feel expensive without saying a word about sustainability."
+        data-gallery="https://media.istockphoto.com/id/2098359215/photo/digital-marketing-concept-businessman-using-laptop-with-ads-dashboard-digital-marketing.jpg?s=612x612&w=0&k=20&c=OdQP1rq-YcNN2nIuC8slL1BJKEwdYb7rT5mqTUNSTZQ=,https://media.istockphoto.com/id/1385970223/photo/great-idea-of-a-marketing-strategy-plan-at-a-creative-office.jpg?s=612x612&w=0&k=20&c=6up_J8ekhYIbF3qiUEo9t28u8X-UrFNqwryyRhBl35w=,https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=1200&q=80">
+        <div class="idx">03</div>
+        <h3>Verdant — Retail Campaign</h3>
+        <div class="tags"><span>Direction</span><span>Color</span></div>
+        <div class="year">2024</div>
+      </div>
+      <div class="project-row" data-img="https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=600&q=60"
+        data-label="Doc" data-client="Halcyon" data-role="Story, Edit"
+        data-desc="A mini-documentary built entirely in the edit — pacing and silence carried more of the story than any interview clip, with cuts placed like beats rather than transitions."
+        data-gallery="https://imgs.search.brave.com/qFDZACvu_dzQRHJijvYvyhI2ltVpVNPffeyCirYmqXw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/ZGVza3RvcC1kb2N1/bWVudGFyaWVzLmNv/bS9pbWFnZXMvZmVt/YWxlLXNob290aW5n/LWRzbHItbWljLWZy/ZWUtdG8tdXNlLmpw/Zw,https://imgs.search.brave.com/Uh12mEkqLR18BZC1qm6O2e1nNVbNuMsfmu5uGckluHo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9wbGF5/cGxheS5jb20vX2Fz/dHJvL2thbF92aXN1/YWxzX0lfbmRfTFND/WV8wNF91bnNwbGFz/aF8xXzFfN2RjZjc5/MmI0OV9aMWM2R29s/LndlYnA,https://imgs.search.brave.com/muC0kIlBxf1mK1gsmc8PH3s_LYDqVoXoHq6OKs2yjn4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMjIy/MTI5NTA5Ni9waG90/by9wcm9mZXNzaW9u/YWwtdmlkZW8tY2Ft/ZXJhLXJlY29yZGlu/Zy1hLXBvZGNhc3Qt/aW4tYS1tb2Rlcm4t/c3R1ZGlvLXNldHVw/LmpwZz9zPTYxMng2/MTImdz0wJms9MjAm/Yz1LU0Izdkg0a3Nr/bnhYQ1ZUM010VHNR/N2ItNWFnbkdkYnFu/NWtuU0FxU3RBPQ">
+        <div class="idx">04</div>
+        <h3>Halcyon — Mini Documentary</h3>
+        <div class="tags"><span>Story</span><span>Edit</span></div>
+        <div class="year">2024</div>
+      </div>
+      <div class="project-row" data-img="https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=600&q=60"
+        data-label="Motion" data-client="Oskar & Fine" data-role="Animation"
+        data-desc="An identity loop designed as a reusable motion system rather than a one-off asset — the client's internal team is still building on the same easing tokens today."
+        data-gallery="https://imgs.search.brave.com/5tTrEky8xBiwhXsMOQTlH-otDSF5Bx5yrfnkGCQ9NUs/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTIx/NDQ5OTY2Ny9waG90/by9icmF6aWxpYW4t/aWRlbnRpdHktYXQt/ZGVzay1yZWdpc3Ry/by1nZXJhbC1yZy5q/cGc_cz02MTJ4NjEy/Jnc9MCZrPTIwJmM9/czJSNjl4d2M0cHlw/SmFWOWxsd2JEZFNp/U1MyOE9KYk5pbXJm/MVN2QVhpOD0,https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=1200&q=80,https://cdn.create.vista.com/api/media/small/276346076/stock-photo-close-view-human-eye-data-illustration-robotic-concept">
+        <div class="idx">05</div>
+        <h3>Oskar & Fine — Identity Loop</h3>
+        <div class="tags"><span>Animation</span></div>
+        <div class="year">2023</div>
+      </div>
+      <div class="project-row" data-img="https://images.unsplash.com/photo-1533158326339-7f3cf2404354?w=600&q=60"
+        data-label="Film" data-client="Ferro" data-role="Direction, Sound"
+        data-desc="A sonic identity film where the audio spec was written before a single frame was shot — camera moves were choreographed to match a score, not the other way around."
+        data-gallery="https://media.istockphoto.com/id/1400794599/photo/videographer-close-up-cameraman-man-with-camera-movie.jpg?s=612x612&w=0&k=20&c=lSkVcv6jmNM15Z7q_zcGW-M_DnMEPckyDANHnFRdm-Q=,https://imgs.search.brave.com/efY4uWDef3-n_HmIPmEEUr5wD2QpWIMKh7hLIN6putE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvNDkw/OTI0NzgzL3Bob3Rv/L2ZpbG0tbGVucy5q/cGc_cz02MTJ4NjEy/Jnc9MCZrPTIwJmM9/ZUZmMk1hbk5GTUpf/MVZnM0NIRFR2VU5U/Q1hMbUltTWZZNmRr/eWZZWVFXcz0,https://media.istockphoto.com/id/1007557230/photo/movie-projector-on-dark-background.jpg?s=612x612&w=0&k=20&c=bPgXKrqKU4nrWgJ_RXgLe9KN4SIitgTIcRobxxBiXTo=">
+        <div class="idx">06</div>
+        <h3>Ferro — Sonic Identity Film</h3>
+        <div class="tags"><span>Direction</span><span>Sound</span></div>
+        <div class="year">2023</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REEL-->
+  <section id="reel">
+    <video class="reel-video-bg" autoplay muted loop playsinline preload="none">
+      <source src="E:/MyPrograms/VaultofCodes/VOC-Major/Project.2-Editkaro/videos/showreel.mp4" type="video/mp4">
+    </video>
+    <div class="reel-overlay"></div>
+    <div class="reel-track">
+      <span>Showreel</span><span class="solid">2026</span><span>Showreel</span><span class="solid">2026</span>
+      <span>Showreel</span><span class="solid">2026</span><span>Showreel</span><span class="solid">2026</span>
+    </div>
+    <div class="center-btn">Play<br />Reel ▸</div>
+  </section>
+
+  <!-- AWARDS-->
+  <section id="awards">
+    <div class="eyebrow">Recognition</div>
+    <div class="work-head">
+      <h2 class="display">Noted &amp;<br /><em class="glitch-accent">awarded.</em></h2>
+      <div class="work-count">06 — Honors</div>
+    </div>
+    <div class="award-grid">
+      <div class="award-card"><span class="yr">2025</span>
+        <div class="badge">A</div>
+        <h4>Awwwards — Site of the Day</h4>
+        <p>Northline brand film microsite, recognized for pacing and typographic rhythm.</p>
+      </div>
+      <div class="award-card"><span class="yr">2025</span>
+        <div class="badge">FWA</div>
+        <h4>FWA — Motion Excellence</h4>
+        <p>Auric product launch loop, cited for choreography between sound and motion.</p>
+      </div>
+      <div class="award-card"><span class="yr">2024</span>
+        <div class="badge">CSS</div>
+        <h4>CSSDA — Best UI Design</h4>
+        <p>Verdant retail campaign, praised for restraint and color discipline.</p>
+      </div>
+      <div class="award-card"><span class="yr">2024</span>
+        <div class="badge">D&amp;AD</div>
+        <h4>D&amp;AD — Wood Pencil</h4>
+        <p>Halcyon mini-documentary, honored for editorial pacing and sound design.</p>
+      </div>
+      <div class="award-card"><span class="yr">2023</span>
+        <div class="badge">ID</div>
+        <h4>Motion Design Awards</h4>
+        <p>Oskar &amp; Fine identity loop, recognized for a scalable, reusable motion system.</p>
+      </div>
+      <div class="award-card"><span class="yr">2023</span>
+        <div class="badge">SXSW</div>
+        <h4>SXSW — Sonic Branding</h4>
+        <p>Ferro sonic identity film, shortlisted for its integrated audio-motion language.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section id="categories">
+    <div class="eyebrow">Explore</div>
+    <div class="work-head">
+      <h2 class="display">Browse by<br /><em>category.</em></h2>
+      <div class="work-count">07 — Groups</div>
+    </div>
+
+    <div class="cat-list">
+      <a class="cat-row"
+        data-desc="Motion work exploring generative and AI-assisted pipelines — where the craft shifts from keyframing every value to art-directing a system."
+        data-img="https://cdn.sanity.io/images/wnz6atca/production/52c275f5b726e826b0507c932d6a19c4ea4bd3a9-2500x1667.jpg?w=1822&h=848&q=80&fit=crop&auto=format"
+        data-gallery="https://cdn.sanity.io/images/wnz6atca/production/52c275f5b726e826b0507c932d6a19c4ea4bd3a9-2500x1667.jpg?w=1200&q=80,https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=1200&q=80">
+        <span class="cat-name">AI <span class="cat-count">13</span></span>
+        <span class="cat-arrow">View works</span>
+      </a>
+      <a class="cat-row" data-desc="Architecture and design work that pushes the boundaries of spatial storytelling."
+        data-img="https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=900&q=60"
+        data-gallery="https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=1200&q=80,https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&q=80">
+        <span class="cat-name">Archi &amp; Design <span class="cat-count">12</span></span>
+        <span class="cat-arrow">View works</span>
+      </a>
+      <a class="cat-row" data-desc="Beauty and lifestyle content that captures the essence of modern aesthetics."
+        data-img="https://cdn.sanity.io/images/wnz6atca/production/b38f435d0da5a2be9dfe111c5ab1627b3f5f2c01-1920x1080.jpg?w=1822&h=848&q=80&fit=crop&auto=format"
+        data-gallery="https://cdn.sanity.io/images/wnz6atca/production/b38f435d0da5a2be9dfe111c5ab1627b3f5f2c01-1920x1080.jpg?w=1200&q=80,https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=1200&q=80">
+        <span class="cat-name">Beauty <span class="cat-count">16</span></span>
+        <span class="cat-arrow">View works</span>
+      </a>
+      <a class="cat-row" data-desc="Character design and animation work."
+        data-img="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=900&q=60"
+        data-gallery="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=1200&q=80,https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=1200&q=80">
+        <span class="cat-name">Characters <span class="cat-count">26</span></span>
+        <span class="cat-arrow">View works</span>
+      </a>
+      <a class="cat-row" data-desc="Luxury brand work that emphasizes craftsmanship and exclusivity."
+        data-img="https://cdn.sanity.io/images/wnz6atca/production/b77da95173571ce1a193ab5e1cada10d0213bc51-1500x844.jpg?w=1822&h=848&q=80&fit=crop&auto=format"
+        data-gallery="https://cdn.sanity.io/images/wnz6atca/production/b77da95173571ce1a193ab5e1cada10d0213bc51-1500x844.jpg?w=1200&q=80,https://images.unsplash.com/photo-1526481280693-3bfa7568e0f3?w=1200&q=80">
+        <span class="cat-name">Luxury <span class="cat-count">17</span></span>
+        <span class="cat-arrow">View works</span>
+      </a>
+      <a class="cat-row" data-desc="Set design work for film and television productions."
+        data-img="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=900&q=60"
+        data-gallery="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&q=80,https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=1200&q=80">
+        <span class="cat-name">Set Design <span class="cat-count">13</span></span>
+        <span class="cat-arrow">View works</span>
+      </a>
+      <a class="cat-row" data-desc="Typography work that explores the intersection of type and motion."
+        data-img="https://cdn.sanity.io/images/wnz6atca/production/80954ec8e3f75bfb60fe98f435e605a3021a8d90-1500x1060.webp?w=1822&h=848&q=80&fit=crop&auto=format"
+        data-gallery="https://cdn.sanity.io/images/wnz6atca/production/80954ec8e3f75bfb60fe98f435e605a3021a8d90-1500x1060.webp?w=1200&q=80">
+        <span class="cat-name">Typography <span class="cat-count">3</span></span>
+        <span class="cat-arrow">View works</span>
+      </a>
+    </div>
+  </section>
+
+  <div id="catImageFloat"><img src="" alt="" /></div>
+
+  <div class="cat-overlay" id="catOverlay"></div>
+  <aside class="cat-panel" id="catPanel" aria-hidden="true">
+    <div class="cat-panel-scroll" id="catPanelScroll">
+      <div class="cat-panel-inner" id="catPanelInner">
+        <button class="cat-panel-close" id="catPanelClose" aria-label="Close category details">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials">
+    <div class="eyebrow">Client Words</div>
+    <div class="work-head">
+      <h2 class="display">What people<br /><em>say after.</em></h2>
+      <div class="work-count">04 — Quotes</div>
+    </div>
+    <div class="testi-viewport" id="testiViewport">
+      <button class="testi-nav prev" id="testiPrev" aria-label="Previous testimonial">‹</button>
+      <div class="testi-track" id="testiTrack">
+        <div class="testi-slide">
+          <div class="quote-mark">“</div>
+          <blockquote>DRIFT didn't just animate our launch — they choreographed the entire attention span of the room.
+          </blockquote>
+          <div class="who">— <b>Mara Silva</b>, Brand Director, Northline</div>
+        </div>
+        <div class="testi-slide">
+          <div class="quote-mark">“</div>
+          <blockquote>Every easing curve felt considered. It's the first campaign where motion carried more meaning than
+            the copy.</blockquote>
+          <div class="who">— <b>Jonas Reyk</b>, Founder, Auric</div>
+        </div>
+        <div class="testi-slide">
+          <div class="quote-mark">“</div>
+          <blockquote>They shipped a motion system, not just a video — our internal team is still using their tokens
+            today.</blockquote>
+          <div class="who">— <b>Elin Voss</b>, Creative Lead, Verdant</div>
+        </div>
+        <div class="testi-slide">
+          <div class="quote-mark">“</div>
+          <blockquote>Restraint was the whole point, and they nailed it — nothing moved without a reason to.
+          </blockquote>
+          <div class="who">— <b>Theo Marchetti</b>, Director, Halcyon</div>
+        </div>
+      </div>
+      <button class="testi-nav next" id="testiNext" aria-label="Next testimonial">›</button>
+    </div>
+    <div class="testi-dots" id="testiDots"></div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <p class="sentence display" id="aboutSentence">We're a small studio that treats every frame like it has to
+      earn the next one. No filler cuts, no stock motion — just rhythm, restraint, and a reason for the camera to move.
+    </p>
+    <div class="stats">
+      <div class="stat">Projects Shipped<b data-count="112">0</b></div>
+      <div class="stat">Studio Size<b data-count="9">0</b></div>
+      <div class="stat">Avg. Watch-through<b data-count="81" data-suffix="%">0%</b></div>
+    </div>
+  </section>
+
+  <!-- FILM-STRIP GALLERY -->
+  <section id="filmstrip">
+    <div class="filmstrip-stage">
+      <div class="filmstrip-head">
+        <div class="eyebrow">Behind the Reel</div>
+        <h2 class="display">Frame by<br /><em>frame.</em></h2>
+      </div>
+      <div class="filmstrip-track" id="filmTrack">
+        <div class="film-frame">
+          <span class="frame-num">01</span>
+          <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=700&q=60" alt="" />
+          <video class="frame-video" muted loop playsinline preload="none">
+            <source src="https://cdn-useast1.kapwing.com/static/nfo-Building_an_online_video_editor_V2.mp4"
+              type="video/mp4">
+          </video>
+          <div class="frame-cap">Northline — set, day one</div>
+        </div>
+
+        <div class="film-frame">
+          <span class="frame-num">02</span>
+          <img src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=700&q=60" alt="" />
+          <video class="frame-video" muted loop playsinline preload="none">
+            <source
+              src="https://player.vimeo.com/progressive_redirect/playback/1138858281/rendition/1080p/file.mp4?loc=external&oauth2_token_id=1800410983&signature=9579bd61e0f2dc81f22752c1a6a95365db9653dcb03e4e494d2d4d9efe0a7ab1"
+              type="video/mp4">
+          </video>
+          <div class="frame-cap">Auric — lighting rig</div>
+        </div>
+
+        <div class="film-frame">
+          <span class="frame-num">03</span>
+          <img src="https://images.unsplash.com/photo-1526481280693-3bfa7568e0f3?w=700&q=60" alt="" />
+          <video class="frame-video" muted loop playsinline preload="none">
+            <source
+              src="https://player.vimeo.com/progressive_redirect/playback/1136436758/rendition/1080p/file.mp4%20%281080p%29.mp4?loc=external&oauth2_token_id=1800410983&signature=bb628215cba7b3982e6300b54ab02c4fe3dc2e10041be438abe9a58f1e173b76"
+              type="video/mp4">
+          </video>
+          <div class="frame-cap">Verdant — color test</div>
+        </div>
+
+        <div class="film-frame">
+          <span class="frame-num">04</span>
+          <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=700&q=60" alt="" />
+          <video class="frame-video" muted loop playsinline preload="none">
+            <source
+              src="https://player.vimeo.com/progressive_redirect/playback/1138949911/rendition/1080p/file.mp4?loc=external&oauth2_token_id=1800410983&signature=8e6c938b4b2ce023390b1e76354e9ec1d7068f9bd0c2a2546bf921e4d21db8f3"
+              type="video/mp4">
+          </video>
+          <div class="frame-cap">Halcyon — final cut</div>
+        </div>
+
+        <div class="film-frame">
+          <span class="frame-num">05</span>
+          <img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=700&q=60" alt="" />
+          <video class="frame-video" muted loop playsinline preload="none">
+            <source
+              src="https://player.vimeo.com/progressive_redirect/playback/1156815333/rendition/source/file.mp4.mp4?loc=external&oauth2_token_id=1800410983&signature=50492a50292bdf417d407829cfff34137067222b4ce2373b7aaf21ce2fe8a03b"
+              type="video/mp4">
+          </video>
+          <div class="frame-cap">Oskar &amp; Fine — loop test</div>
+        </div>
+
+        <div class="film-frame">
+          <span class="frame-num">06</span>
+          <img src="https://images.unsplash.com/photo-1533158326339-7f3cf2404354?w=700&q=60" alt="" />
+          <video class="frame-video" muted loop playsinline preload="none">
+            <source
+              src="https://player.vimeo.com/progressive_redirect/playback/1152931245/rendition/source/file.mp4.mp4?loc=external&oauth2_token_id=1800410983&signature=8fe1028e6e79312373275e21e07cd738b0b63912372abde7ce38d1af6174b94d"
+              type="video/mp4">
+          </video>
+          <div class="frame-cap">Ferro — sound stage</div>
+        </div>
+
+        <div class="film-frame">
+          <span class="frame-num">07</span>
+          <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=700&q=60" alt="" />
+          <video class="frame-video" muted loop playsinline preload="none">
+            <source
+              src="https://player.vimeo.com/progressive_redirect/playback/1136512977/rendition/1080p/file.mp4?loc=external&oauth2_token_id=1800410983&signature=90d84d890f107c1292560111e3d687e60a0e3d77f08bebcebd9c783adf2cbd3c"
+              type="video/mp4">
+          </video>
+          <div class="frame-cap">Studio — grading suite</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- METRICS -->
+  <section class="metrics" style="position: relative; overflow: hidden; padding: 60px 20px; color: white;">
+    <div style="
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: url('E:/MyPrograms/VaultofCodes/VOC-Major/Project.2-Editkaro/images/metrics.jpg') center / cover no-repeat;
+    -webkit-mask-image: linear-gradient(to top, black 0%, transparent 100%);
+    mask-image: linear-gradient(to top, black 0%, transparent 100%);">
+    </div>
+    <p class="lead" style="position: relative; z-index: 1;">A decade spent turning static brands into things that <span
+        class="serif">move, breathe, and stay.</span></p>
+    <div class="metric-grid" style="position: relative; z-index: 1;">
+      <div class="metric">
+        <div class="val" data-count="10">0</div>
+        <div class="lbl">Years in motion</div>
+      </div>
+      <div class="metric">
+        <div class="val" data-count="140" data-suffix="+">0</div>
+        <div class="lbl">Films shipped</div>
+      </div>
+      <div class="metric">
+        <div class="val" data-count="27">0</div>
+        <div class="lbl">Global brands</div>
+      </div>
+      <div class="metric">
+        <div class="val" data-count="9">0</div>
+        <div class="lbl">Specialists</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUTRO -->
+  <section class="outro" id="contact" style="position: relative; overflow: hidden; padding: 80px 20px; color: white;">
+    <div style="
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: url('E:/MyPrograms/VaultofCodes/VOC-Major/Project.2-Editkaro/images/outro.jpg') center / cover no-repeat;
+    -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 0%, transparent 100%);
+  "></div>
+
+    <h2 style="position: relative; z-index: 1;">Let's set your<br /><span class="serif">brand in motion.</span></h2>
+    <p style="position: relative; z-index: 1;">Selective collaborations with studios and brands who believe movement is
+      meaning. Tell us what you're building.</p>
+    <a href="mailto:editkaro@edits.in" class="cta" style="position: relative; z-index: 1;">Start an enquiry</a>
+  </section>
+
+  <footer
+    style="background-image: url('E:/MyPrograms/VaultofCodes/VOC-Major/Project.2-Editkaro/images/actualfooterwall.jpg'); background-size: cover; background-position: bottom;">
+    <h2 class="display">Let's make it<br><em>Move.</em></h2>
+
+    <!-- Contact Form -->
+    <div class="footer-inner">
+      <!-- Contact Form -->
+      <div class="footer-contact-form">
+        <div class="form-title">Get in touch</div>
+        <form action="#" method="POST" onsubmit="handleSubmit(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="footer-name">Name</label>
+              <input type="text" id="footer-name" name="name" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+              <label for="footer-email">Email</label>
+              <input type="email" id="footer-email" name="email" placeholder="you@example.com" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group full-width">
+              <label for="footer-subject">Subject</label>
+              <input type="text" id="footer-subject" name="subject" placeholder="What's this about?">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group full-width">
+              <label for="footer-message">Message</label>
+              <textarea id="footer-message" name="message" placeholder="Tell us about your project..."
+                required></textarea>
+            </div>
+          </div>
+          <button type="submit" class="btn-submit">
+            Send Message <span class="arrow">→</span>
+          </button>
+        </form>
+        <div id="form-feedback" style="margin-top: 14px; font-size: 0.85rem; color: #d4a853; min-height: 20px;"></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div style="font-size: 20px;">
+        <a href="mailto:editkaro@edits.in">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;editkaro@edits.in</a>
+      </div>
+      <div class="footer-links">
+        <a href="https://www.instagram.com/vaultofcodes">Instagram</a>
+        <a href="https://www.vimeo.com/vaultofcodes">Vimeo</a>
+        <a href="https://www.linkedin.com/company/vaultofcodes">LinkedIn</a>
+      </div>
+      <div>© 2026 Drift Studio</div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="script.js"></script>
+
+
+  <script>
+    function handleSubmit(event) {
+      event.preventDefault();
+      const feedback = document.getElementById('form-feedback');
+      const form = event.target;
+
+      feedback.textContent = '✓ Message sent successfully! We\'ll get back to you soon.';
+      feedback.style.color = '#d4a853';
+
+      setTimeout(() => {
+        feedback.textContent = '';
+      }, 4000);
+      form.reset();
+    }
+  </script>
+
+  <script>
+    (function () {
+      document.addEventListener('DOMContentLoaded', () => {
+        const overlay = document.getElementById('projectOverlay');
+        const panel = document.getElementById('projectPanel');
+        const closeBtn = document.getElementById('projectPanelClose');
+        const inner = document.getElementById('projectPanelInner');
+        const scrollArea = document.getElementById('projectPanelScroll');
+
+        if (!overlay || !panel || !closeBtn || !inner || !scrollArea) {
+          console.warn('Project panel: missing markup, check the sidebar HTML was added.');
+          return;
+        }
+
+        let isOpen = false;
+
+        function buildContent(row) {
+          const title = row.querySelector('h3')?.textContent || '';
+          const year = row.querySelector('.year')?.textContent || '';
+          const tags = Array.from(row.querySelectorAll('.tags span')).map(s => s.textContent).join(', ');
+          const label = row.dataset.label || '';
+          const client = row.dataset.client || title.split('—')[0].trim();
+          const roleText = row.dataset.role || tags;
+          const desc = row.dataset.desc || 'Details for this project are coming soon.';
+          const heroImg = row.dataset.img || '';
+          const gallery = (row.dataset.gallery || '').split(',').map(s => s.trim()).filter(Boolean);
+
+          inner.innerHTML = `
+          <div class="pp-eyebrow">${label} — ${year}</div>
+          <h2 class="pp-title display">${title}</h2>
+          <div class="pp-hero-img"><img src="${heroImg}" alt="${title}" /></div>
+          <div class="pp-meta">
+            <div>Client<b>${client}</b></div>
+            <div>Role<b>${roleText}</b></div>
+          </div>
+          <p class="pp-desc">${desc}</p>
+          <div class="pp-gallery">
+            ${gallery.map(src => `<img src="${src}" alt="${title}" />`).join('')}
+          </div>
+        `;
+        }
+
+        function open(row) {
+          buildContent(row);
+          scrollArea.scrollTop = 0;
+          isOpen = true;
+          overlay.classList.add('open');
+          panel.classList.add('open');
+          panel.setAttribute('aria-hidden', 'false');
+          document.body.style.overflow = 'hidden';
+
+          if (window.__lenisInstance && window.__lenisInstance.stop) {
+            window.__lenisInstance.stop();
+          }
+
+          if (window.gsap) {
+            gsap.set('.pp-gallery img', { opacity: 0, y: 24 });
+            gsap.to('.pp-gallery img', {
+              opacity: 1, y: 0, duration: .7, stagger: .1, ease: 'power3.out', delay: .35
+            });
+          }
+        }
+
+        function close() {
+          isOpen = false;
+          overlay.classList.remove('open');
+          panel.classList.remove('open');
+          panel.setAttribute('aria-hidden', 'true');
+          document.body.style.overflow = '';
+
+          if (window.__lenisInstance && window.__lenisInstance.start) {
+            window.__lenisInstance.start();
+          }
+        }
+
+        document.querySelectorAll('.project-row').forEach(row => {
+          row.addEventListener('click', () => open(row));
+        });
+        closeBtn.addEventListener('click', close);
+        overlay.addEventListener('click', close);
+        document.addEventListener('keydown', e => {
+          if (e.key === 'Escape' && isOpen) close();
+        });
+
+        scrollArea.addEventListener('wheel', (e) => {
+          if (!isOpen) return;
+          e.stopPropagation();
+          e.preventDefault();
+          scrollArea.scrollTop += e.deltaY;
+        }, { passive: false });
+      });
+    })();
+  </script>
+
+  <!-- CARD EXPAND OVERLAYS -->
+  <div class="card-expand-overlay" id="expand-story" data-expand-panel>
+    <button class="card-expand-close" aria-label="Close">
+      <span></span><span></span>
+    </button>
+    <div class="card-expand-scroll">
+      <div class="card-expand-inner">
+        <div class="ce-eyebrow">Reel · 2016 — 2026</div>
+        <h2 class="ce-title display">Frames<span class="serif"> in flux.</span></h2>
+        <p class="ce-lead">Ten years spent treating motion as a craft, not a garnish. Direction, design, and
+          animation, built around restraint rather than spectacle.</p>
+        <div class="ce-grid">
+          <div class="ce-block">
+            <div class="ce-num">01 — Craft</div>
+            <h3>Every frame is a decision.</h3>
+            <p>We obsess over easing curves, timing, and weight until motion stops feeling designed and starts
+              feeling inevitable. Every project starts with a frame-rate conversation, not a mood board — we map
+              out the exact easing curve a brand's motion should live in before a single asset is cut.</p>
+          </div>
+          <div class="ce-block">
+            <div class="ce-num">02 — Story</div>
+            <h3>Rhythm carries the narrative.</h3>
+            <p>Pacing is our language. We choreograph attention across seconds so a message lands with the
+              emotional beat it deserves — storyboarding for emotion first, information second.</p>
+          </div>
+          <div class="ce-block">
+            <div class="ce-num">03 — Systems</div>
+            <h3>Motion that scales cleanly.</h3>
+            <p>Reusable motion systems and tokens keep a brand alive and consistent across every screen, platform,
+              and moment — documented and handed off so the language survives past our engagement.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-expand-overlay" id="expand-process" data-expand-panel>
+    <button class="card-expand-close" aria-label="Close">
+      <span></span><span></span>
+    </button>
+    <div class="card-expand-scroll">
+      <div class="card-expand-inner">
+        <div class="ce-eyebrow">How We Work</div>
+        <h2 class="ce-title display">From brief<span class="serif"> to motion.</span></h2>
+        <p class="ce-lead">A process built around listening first, prototyping the feeling early, and shipping
+          assets a dev team can actually implement without guesswork.</p>
+        <div class="ce-grid">
+          <div class="ce-block">
+            <div class="ce-num">Phase 01 — Listen</div>
+            <h3>We start with intent.</h3>
+            <p>Before a single keyframe, we map the feeling a brand needs to earn and the moment motion should
+              own — asking what people should feel in the first three seconds.</p>
+          </div>
+          <div class="ce-block">
+            <div class="ce-num">Phase 02 — Choreograph</div>
+            <h3>We design the timing.</h3>
+            <p>Storyboards become motion studies. We prototype easing and rhythm early with grey-box animations,
+              so the team feels the beat before polish begins.</p>
+          </div>
+          <div class="ce-block">
+            <div class="ce-num">Phase 03 — Ship</div>
+            <h3>We deliver it living.</h3>
+            <p>Final frames arrive with tokens, specs, and Lottie files — motion engineers can implement without
+              losing a millisecond, and we stay available past handoff.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-expand-overlay" id="expand-studio" data-expand-panel>
+    <button class="card-expand-close" aria-label="Close">
+      <span></span><span></span>
+    </button>
+    <div class="card-expand-scroll">
+      <div class="card-expand-inner">
+        <div class="ce-eyebrow">The Studio</div>
+        <h2 class="ce-title display">A small room<span class="serif"> of specialists.</span></h2>
+        <p class="ce-lead">Nine people, two cities, and a deliberately small roster of clients — because
+          restraint isn't just an aesthetic here, it's how we choose to work.</p>
+        <div class="ce-grid">
+          <div class="ce-block">
+            <div class="ce-num">Philosophy</div>
+            <h3>Restraint over spectacle.</h3>
+            <p>We believe the best motion is nearly invisible — you feel the smoothness long before you notice
+              the technique. If a transition draws attention to itself instead of the story, it gets cut.</p>
+          </div>
+          <div class="ce-block">
+            <div class="ce-num">People</div>
+            <h3>Directors who animate.</h3>
+            <p>No hand-offs between thinkers and makers. Everyone who shapes the idea also shapes the final
+              frame, so nothing gets lost in translation between concept and execution.</p>
+          </div>
+          <div class="ce-block">
+            <div class="ce-num">Practice</div>
+            <h3>Fewer, deeper partnerships.</h3>
+            <p>We take on a handful of projects a year so each one gets the obsession — and the time — to be
+              right. Fewer logos on the reel, but a body of work we'd stand behind years later.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-overlay" id="projectOverlay"></div>
+  <aside class="project-panel" id="projectPanel" aria-hidden="true">
+    <button class="project-panel-close" id="projectPanelClose" aria-label="Close project details">
+      <span></span><span></span>
+    </button>
+    <div class="project-panel-scroll" id="projectPanelScroll">
+      <div class="project-panel-inner" id="projectPanelInner"></div>
+    </div>
+  </aside>
+</body>
+
+</html>
