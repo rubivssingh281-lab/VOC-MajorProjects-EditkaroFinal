@@ -1066,8 +1066,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const soundToggle = document.getElementById('sound-toggle');
     let soundOn = false;
 
-    // Create an Audio element
-    const audio = new Audio('E:/MyPrograms/VaultofCodes/VOC-Major/Project.2-Editkaro/sound-toggle/ThemeMain.mp3');
+    const audio = new Audio('sound-toggle/ThemeMain.mp3');
     audio.loop = true;        
     audio.volume = 0.4;       
     audio.preload = 'auto';    
